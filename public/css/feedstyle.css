@@ -1,0 +1,216 @@
+.btn {
+background-color: #121212;
+border: white;
+
+}
+body{
+    background-color: whitesmoke;
+}
+
+*,
+      :before,
+      :after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      header {
+        height: 15vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #121212;
+      }
+
+      .headercontainer {
+        width: 9.25em;
+        height: 1.15em;
+        font-size: 4rem;
+        font-family: sans-serif;
+        position: relative;
+      }
+
+      .headercontainer div {
+        position: absolute;
+        left: 0;
+        text-transform: uppercase;
+        width: 100%;
+        display: block;
+        text-align:center;
+      }
+
+      .upper {
+        top: 0;
+        height: 52.5%;
+        color: #fff;
+        overflow: hidden;
+        z-index: 3;
+        animation: moveUp 1.5s ease-in-out 1;
+        background-color: #121212;
+        
+      }
+
+      .lower {
+        bottom: 0;
+        height: 100%;
+        background: linear-gradient(180deg, #121212 52.5%, #fff 52.5%);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        z-index: 1;
+        animation: moveDown 1.5s ease-in-out 1;
+      }
+
+      .inside {
+        position: absolute;
+        top: 40%;
+        transform: translateY(-40%);
+        text-align: center;
+        z-index: 2;
+        font-size: 1rem;
+        color: #dc143c;
+      }
+
+      @keyframes moveUp {
+        0%,
+        100% {
+          top: 0;
+        }
+
+        50%,
+        70% {
+          top: -45px;
+        }
+      }
+
+      @keyframes moveDown {
+        0%,
+        100% {
+          top: 0;
+        }
+
+        50%,
+        70% {
+          top: 30px;
+        }
+      }
+
+      @media (max-width: 424px) {
+        .container {
+          font-size: 2.5rem;
+          
+        }
+
+        .inside {
+          font-size: 0.75rem;
+        }
+      }
+
+      @media (max-width: 320px) {
+        .container {
+          font-size: 2rem;
+          
+        }
+
+        .inside {
+          font-size: 0.5rem;
+        }
+      }
+
+#profilesection {
+    width: 10%;
+    
+}
+
+ .wrapper {
+  height: 100%;
+  /*This part is important for centering*/
+  display: inline-grid;
+  place-items: center;
+}
+
+.typing-demo {
+  width: 22ch;
+  height: auto;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  
+  overflow: auto;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}     
+
+
+
+
+.pic-ctn {
+    width: 100vw;
+    height: 200px;
+  }
+  
+  @keyframes display {
+    0% {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+    10% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    20% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    30% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+  }
+  
+  #picgallery{
+    width: 10%;
+  }
+  .pic-ctn {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    margin-top: 15vh;
+  }
+  
+  .pic-ctn > img {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 100px);
+    opacity: 0;
+    animation: display 10s infinite;
+  }
+  
+  img:nth-child(2) {
+    animation-delay: 2s;
+  }
+  img:nth-child(3) {
+    animation-delay: 4s;
+  }
+  img:nth-child(4) {
+    animation-delay: 6s;
+  }
+  img:nth-child(5) {
+    animation-delay: 8s;
+  }

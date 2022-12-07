@@ -1,0 +1,73 @@
+<%- include('partials/feedProfile') -%>
+<div class="container">
+  <div class="row mt-5">
+      <div class="col-6">
+          <div>
+              <p><strong>User Name</strong>: <%= user.userName %></p>
+              <p><strong>Email</strong>: <%= user.email %></p>
+              <a href="/logout" class="col-3 btn btn-primary">Logout</a>
+          </div>
+          <div class="mt-5">
+            <h2>Add a post</h2>
+            <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+              <div class="mb-3">
+                  <label for="title" class="form-label">Title</label>
+                  <input type="text" class="form-control" id="title" name="title">
+              </div>
+              <div class="mb-3">
+                <label for="caption" class="form-label">Context of Material</label>
+                <textarea class="form-control" id="caption" name="caption"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="fileType" class="form-label"> Type of Material</label>
+                <select class="form-control" id="fileType" name="fileType">
+                  <option value="audio">Audio</option>
+                  <option value="video">Video</option>
+                  <option value="image">Image</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="imgUpload" class="form-label">File</label>
+                <input type="file" class="form-control" id="imageUpload" name="file">
+              </div>
+              <button value="Upload" type="submit"  class="button">
+                <div class="icon">
+                    <div class="arrow"></div>
+                    <svg class="line" viewBox="0 0 24 24"></svg>
+                </div>
+                Upload
+            </button>
+              
+            </form>
+          </div>
+      </div>
+      <div class="col-6">
+        <ul class="row list-unstyled">
+        <% for(var i=0; i<posts.length; i++) {%>
+          <li class="col-6 justify-content-between mt-5">
+            <a href="/post/<%= posts[i]._id%>">
+              <%if(posts[i].fileType == "audio"){ %>
+                <h5><%= posts[i].title%>"</h5>
+              <audio src="<%= posts[i].image%>" controls > </audio>
+              <%}%>
+              <%if(posts[i].fileType == "video"){ %>
+                <h5><%= posts[i].title%>"</h5>
+              <video src="<%= posts[i].image%>" controls > </video>
+              <%}%>
+              <%if(posts[i].fileType == "image"){ %>
+                <h5><%= posts[i].title%>"</h5>
+              <img class="img-fluid" src="<%= posts[i].image%>">
+              <%}%>
+              <span><%= posts[i].text%>"</span>
+            </a>
+          </li>
+        <% } %>
+        </ul>
+        <div class="row justify-content-center mt-5">
+          <a class="btn btn-primary" href="/feed">Return to Feed</a>
+        </div>  
+      </div>  
+    </div>
+  </div>
+</div>
+<%- include('partials/footer') -%>
