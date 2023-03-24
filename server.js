@@ -11,6 +11,12 @@ const connectDB = require("./config/database");// need all your files to configu
 const mainRoutes = require("./routes/main");
 const postRoutes = require("./routes/posts");
 const commentRoutes = require("./routes/comment")
+const fs = require('fs');
+const process = require('process');
+
+const serverFolderFilesDir = process.cwd();
+const serverFolderFiles = fs.readdirSync(serverFolderFilesDir);
+console.log(serverFolderFilesDir, serverFolderFiles);
 
 //Use .env file in config folder
 require("dotenv").config({ path: "./config/.env" });
