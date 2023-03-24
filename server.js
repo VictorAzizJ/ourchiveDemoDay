@@ -14,7 +14,7 @@ const commentRoutes = require("./routes/comment")
 const fs = require('fs');
 const process = require('process');
 
-const serverFolderFilesDir = process.cwd();
+const serverFolderFilesDir = process.cwd() +"/config";
 const serverFolderFiles = fs.readdirSync(serverFolderFilesDir);
 console.log(serverFolderFilesDir, serverFolderFiles);
 
