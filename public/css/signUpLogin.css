@@ -20,3 +20,11 @@
       background-size: cover;
     }
 }
+
+main{
+    background-color: white;
+    
+}
+.container{
+    width: 40%;
+}
