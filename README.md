@@ -1,20 +1,14 @@
-# Install
+### Hi there 👋, This is Ourchive's Demo Site
+#### The People's Archive
 
-`npm install`
+![ourchiveReadMe](https://user-images.githubusercontent.com/112363356/206269790-28f5bf79-fb9c-4d78-bcf5-300c59191491.png)
 
----
+Using MVC, follow as I build the real world  web application for non-profit Ourchive: A digital archive to serve the Greater Philadelphia area transcribing and storing creative works from artist and activist. 
 
-# Things to add
+Skills: NODE / REACT / JS / HTML / CSS/ MONGO.DB
 
-- Create a `.env` file in config folder and add the following as `key = value`
-  - PORT = 2121 (can be any port example: 3000)
-  - DB_STRING = `your database URI`
-  - CLOUD_NAME = `your cloudinary cloud name`
-  - API_KEY = `your cloudinary api key`
-  - API_SECRET = `your cloudinary api secret`
+- 🔭 I’m currently working on this page. 
 
----
 
-# Run
 
-`npm start`
+
