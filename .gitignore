@@ -1,6 +1,5 @@
 node_modules
 .env
 .vscode
-config/
 controllers
 *.MOV
