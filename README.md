@@ -7,7 +7,7 @@ Using MVC, follow as I build the real world  web application for non-profit Ourc
 
 Skills: NODE / REACT / JS / HTML / CSS/ MONGO.DB
 
-- 🔭 I’m currently working on this page. 
+- 🔭 I’m currently working on this project. WE ARE ACTUALLY KEEPING OUR CODE PRIVATE NOW BUT ENJOY THIS DEMO. WE RELEASE THE SITE JANUARY 2024.
 
 
 
